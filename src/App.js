@@ -1,4 +1,6 @@
-import ExpenseItem from "./Components/ExpenseItem";
+import React from "react";
+import Expenses from "./Components/Expenses/Expenses";
+import NewExpense from "./Components/NewExpense/NewExpense";
 const App = () => {
     let expense = [
         {
@@ -29,29 +31,10 @@ const App = () => {
     ];
 
     return (
-        <div>
-            <ExpenseItem
-                date={expense[0].date}
-                title={expense[0].title}
-                amout={expense[0].amout}
-            ></ExpenseItem>
-            <ExpenseItem
-                date={expense[1].date}
-                title={expense[1].title}
-                amout={expense[1].amout}
-            ></ExpenseItem>
-            <ExpenseItem
-                date={expense[2].date}
-                title={expense[2].title}
-                amout={expense[2].amout}
-            ></ExpenseItem>
-            <ExpenseItem
-                date={expense[3].date}
-                title={expense[3].title}
-                amout={expense[3  ].amout}
-            ></ExpenseItem>
-        </div>
-        
+        <diV>
+            <NewExpense/>
+            <Expenses item={expense}/>
+        </diV>
     );
 };
 
